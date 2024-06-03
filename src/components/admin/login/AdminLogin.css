@@ -1,0 +1,28 @@
+    .main-div {
+        border: 1px solid black;
+    }
+
+    .logo {
+        color: rgb(159, 224, 203);
+    }
+
+    .loginImage {
+        height: clamp(450px, 2vw, 900px) !important;
+        /* height: fit-content !important; */
+        display: flex;
+        justify-content: center;
+        align-self: center;
+    }
+
+    .forgotLink {
+        /* margin-left: 10rem; */
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        font-size: 13px;
+    }
+
+    .navbar-content {
+        display: flex;
+        /* justify-content: space-between !important; */
+    }

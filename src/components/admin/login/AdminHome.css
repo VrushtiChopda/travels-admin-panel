@@ -1,0 +1,22 @@
+@media (max-width: 1550px) {
+    .sidebar-hidden {
+        display: none !important;
+    }
+
+    .main-content {
+        flex: 1;
+    }
+
+    .offcanvas-button {
+        display: block !important;
+    }
+
+    .responsiveSidebar {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.offcanvas-button {
+    display: none;
+}
