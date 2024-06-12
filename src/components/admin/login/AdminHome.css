@@ -12,11 +12,19 @@
     }
 
     .responsiveSidebar {
-        display: flex;
-        justify-content: space-between;
+        display: block !important;
     }
 }
 
 .offcanvas-button {
+    display: none;
+}
+
+
+.sidebar-hidden {
+    display: block;
+}
+
+.responsiveSidebar {
     display: none;
 }

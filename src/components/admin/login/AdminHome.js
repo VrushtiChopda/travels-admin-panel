@@ -45,43 +45,44 @@ function AdminHome() {
                         </div>
                     </div>
                 </div>
+                <div className='responsiveSidebar'>
+                    <div>
+                        <button className="btn offcanvas-button fs-3" type="button" onClick={handleShowOffcanvas} style={{ color: 'black' }}>
+                            <FaBars />
+                        </button>
+                    </div>
+                    <div className={`offcanvas offcanvas-start ${showOffcanvas ? 'show' : ''}`} tabIndex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" style={{ visibility: showOffcanvas ? 'visible' : 'hidden' }}>
+                        <div className="offcanvas-header">
+                            <button type="button" className="btn-close text-reset" aria-label="Close" onClick={handleCloseOffcanvas}></button>
+                        </div>
+                        <div className="offcanvas-body">
+                            <Menu
+                                menuItemStyles={{
+                                    button: {
+                                        [`&.active`]: {
+                                            backgroundColor: '#13395e',
+                                            color: '#b6c8d9',
+                                        },
+                                    },
+                                }}
+                            >
+                                <MenuItem> <h2 className=' logo'>TRAVELS</h2></MenuItem>
+                                <MenuItem component={<Link to="/userdetail" />}> User Details</MenuItem>
+                                <MenuItem component={<Link to="/packages" />}> Packages</MenuItem>
+                                <MenuItem component={<Link to="/destination" />}>Destination</MenuItem>
+                                <MenuItem component={<Link to="/contact" />}>Contact</MenuItem>
+                                <MenuItem component={<Link to="/booking" />}>Booking</MenuItem>
+                            </Menu>
+                        </div>
+                    </div>
+                    <div className='col-10'>
+                        <AdminNavbar />
+                        <Outlet />
+                    </div>
+                </div>
             </div>
 
-            <div className='responsiveSidebar'>
-                <div>
-                    <button className="btn offcanvas-button fs-3" type="button" onClick={handleShowOffcanvas} style={{ color: 'black' }}>
-                        <FaBars />
-                    </button>
-                </div>
-                <div className={`offcanvas offcanvas-start ${showOffcanvas ? 'show' : ''}`} tabIndex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" style={{ visibility: showOffcanvas ? 'visible' : 'hidden' }}>
-                    <div className="offcanvas-header">
-                        <button type="button" className="btn-close text-reset" aria-label="Close" onClick={handleCloseOffcanvas}></button>
-                    </div>
-                    <div className="offcanvas-body">
-                        <Menu
-                            menuItemStyles={{
-                                button: {
-                                    [`&.active`]: {
-                                        backgroundColor: '#13395e',
-                                        color: '#b6c8d9',
-                                    },
-                                },
-                            }}
-                        >
-                            <MenuItem> <h2 className=' logo'>TRAVELS</h2></MenuItem>
-                            <MenuItem component={<Link to="/userdetail" />}> User Details</MenuItem>
-                            <MenuItem component={<Link to="/packages" />}> Packages</MenuItem>
-                            <MenuItem component={<Link to="/destination" />}>Destination</MenuItem>
-                            <MenuItem component={<Link to="/contact" />}>Contact</MenuItem>
-                            <MenuItem component={<Link to="/booking" />}>Booking</MenuItem>
-                        </Menu>
-                    </div>
-                </div>
-                <div className='col-10'>
-                    <AdminNavbar />
-                    <Outlet />
-                </div>
-            </div>
+
         </>
     );
 }

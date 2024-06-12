@@ -34,3 +34,29 @@ export const UpdateDestination = async (destid, data) => {
 export const DeleteDestination = async (id) => {
     return await axios.delete(`http://localhost:2000/api/destination/deleteDesti/${id}`)
 }
+
+//------------------- user details -------------------------------
+
+export const getUsers = async () => {
+    const userToken = localStorage.getItem('token')
+    return await axios.get('http://localhost:2000/api/user/register/getUser', {
+        headers: {
+            Authorization: `Bearer ${userToken}`
+        }
+    })
+}
+
+export const DeleteuserDetail = async (id) => {
+    return await axios.delete(`http://localhost:2000/api/user/register/deleteUser/${id}`)
+}
+
+//------------------ contact -----------------------------------
+
+export const getContact = async () => {
+    return await axios.get('http://localhost:2000/api/contact/getDetail')
+}
+
+export const deleteContact = async (id) => {
+    console.log(id, "ididididididididididid")
+    return await axios.delete(`http://localhost:2000/api/contact/deleteDetail/${id}`)
+}
