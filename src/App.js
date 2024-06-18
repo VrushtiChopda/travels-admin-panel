@@ -10,6 +10,7 @@ import Destination from './components/admin/sidebar/destination/Destination'
 import Contact from './components/admin/sidebar/contacts/Contact'
 import UserDetails from './components/admin/sidebar/userDetails/UserDetails'
 import Protected from './components/protected/Protected';
+import Slider from './components/admin/sidebar/slider/Slider';
 function App() {
   return (
     <>
@@ -22,6 +23,7 @@ function App() {
           <Route path='/destination' element={<Destination />}></Route>
           <Route path='/contact' element={<Contact />}></Route>
           <Route path='/userdetail' element={<UserDetails />}></Route>
+          <Route path='/slider' element={<Slider />}></Route>
         </Route>
       </Routes>
     </>

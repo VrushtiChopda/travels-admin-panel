@@ -35,6 +35,8 @@ function AdminHome() {
                                         <MenuItem component={<Link to="/destination" />}>Destination</MenuItem>
                                         <MenuItem component={<Link to="/contact" />}>Contact</MenuItem>
                                         <MenuItem component={<Link to="/booking" />}>Booking</MenuItem>
+                                        <MenuItem component={<Link to="/slider" />}>Slider</MenuItem>
+                                        <MenuItem component={<Link to="/guide" />}>Guides</MenuItem>
                                     </Menu>
                                 </div>
                             </Sidebar>
@@ -72,6 +74,8 @@ function AdminHome() {
                                 <MenuItem component={<Link to="/destination" />}>Destination</MenuItem>
                                 <MenuItem component={<Link to="/contact" />}>Contact</MenuItem>
                                 <MenuItem component={<Link to="/booking" />}>Booking</MenuItem>
+                                <MenuItem component={<Link to="/slider" />}>Slider</MenuItem>
+                                <MenuItem component={<Link to="/guide" />}>Guides</MenuItem>
                             </Menu>
                         </div>
                     </div>

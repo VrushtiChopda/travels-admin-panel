@@ -60,3 +60,28 @@ export const deleteContact = async (id) => {
     console.log(id, "ididididididididididid")
     return await axios.delete(`http://localhost:2000/api/contact/deleteDetail/${id}`)
 }
+
+//------------------ slider -------------------------------
+
+export const getSlider = async () => {
+    return await axios.get('http://localhost:2000/api/slider/getDetail')
+}
+
+// export const addSlider = async (data) => {
+//     return await axios.post('http://localhost:2000/api/slider/insertDetail', data)
+// }
+
+export const addSlider = async (formData) => {
+    try {
+        const response = await axios.post('http://localhost:2000/api/slider/insertDetail', formData);
+        console.log(response.data)
+        return response;
+    } catch (error) {
+        console.error('Error adding slider:', error);
+        throw error;
+    }
+};
+
+export const deleteSlider = async (id) => {
+    return await axios.delete(`http://localhost:2000/api/slider/deleteDetail/${id}`)
+}
