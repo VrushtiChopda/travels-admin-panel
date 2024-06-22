@@ -67,10 +67,6 @@ export const getSlider = async () => {
     return await axios.get('http://localhost:2000/api/slider/getDetail')
 }
 
-// export const addSlider = async (data) => {
-//     return await axios.post('http://localhost:2000/api/slider/insertDetail', data)
-// }
-
 export const addSlider = async (formData) => {
     try {
         const response = await axios.post('http://localhost:2000/api/slider/insertDetail', formData);
@@ -84,4 +80,35 @@ export const addSlider = async (formData) => {
 
 export const deleteSlider = async (id) => {
     return await axios.delete(`http://localhost:2000/api/slider/deleteDetail/${id}`)
+}
+
+//-------------------- guide ---------------------------------
+
+export const getGuide = async () => {
+    return await axios.get('http://localhost:2000/api/guide/getDetail')
+}
+
+export const addGuide = async (formData) => {
+    try {
+        const response = await axios.post('http://localhost:2000/api/guide/postDetail', formData)
+        console.log(response.data)
+        return response
+    } catch (err) {
+        console.log(err)
+        throw err;
+    }
+}
+
+export const deleteGuide = async (id) => {
+    return await axios.delete(`http://localhost:2000/api/guide/deleteDetail/${id}`)
+}
+
+
+//------------------- booking ------------------------------------------
+export const bookingDetails = async () => {
+    return await axios.get('http://localhost:2000/api/booking/getBookDetail')
+}
+
+export const deleteBooking = async (id) => {
+    return await axios.delete(`http://localhost:2000/api/booking/deleteBookDetail/${id}`)
 }
